@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin:0; background:black; }
+    canvas { display:block; }
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const agents = [];
+const numAgents = 2000;
+
+for(let i=0;i<numAgents;i++){
+  agents.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    angle: Math.random()*Math.PI*2
+  });
+}
+
+function update(){
+  ctx.fillStyle = "rgba(0,0,0,0.05)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  ctx.fillStyle = "white";
+
+  agents.forEach(a=>{
+    a.x += Math.cos(a.angle);
+    a.y += Math.sin(a.angle);
+
+    if(a.x<0||a.x>canvas.width||a.y<0||a.y>canvas.height){
+      a.angle += Math.PI;
+    }
+
+    a.angle += (Math.random()-0.5)*0.2;
+
+    ctx.fillRect(a.x,a.y,1,1);
+  });
+
+  requestAnimationFrame(update);
+}
+
+update();
+</script>
+</body>
+</html>
