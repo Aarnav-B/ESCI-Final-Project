@@ -1,54 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body { margin:0; background:black; }
-    canvas { display:block; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slime Molds — Intelligence Without a Brain</title>
+  <meta name="description" content="A fully static GitHub Pages website about slime molds, their biology, intelligence, and real-world optimization applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<canvas id="c"></canvas>
-<script>
-const canvas = document.getElementById("c");
-const ctx = canvas.getContext("2d");
+  <div class="page-glow page-glow-1"></div>
+  <div class="page-glow page-glow-2"></div>
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  <header class="site-header">
+    <a class="brand" href="#top">Slime Molds</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#intro">Intro</a>
+      <a href="#classification">Classification</a>
+      <a href="#life-cycles">Life Cycles</a>
+      <a href="#intelligence">Intelligence</a>
+      <a href="#applications">Applications</a>
+      <a href="#interactive">Interactive</a>
+    </nav>
+  </header>
 
-const agents = [];
-const numAgents = 2000;
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">Biology • Systems • Optimization</p>
+        <h1>Intelligence without a brain.</h1>
+        <p class="lead">
+          Slime molds are strange, beautiful protists that can sense, remember, adapt, and build efficient networks.
+          In a world obsessed with advanced AI, they show that surprisingly powerful problem-solving can emerge from something primitive.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#interactive">Explore the simulations</a>
+          <a class="button button-secondary" href="#applications">See real-world uses</a>
+        </div>
+      </div>
 
-for(let i=0;i<numAgents;i++){
-  agents.push({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    angle: Math.random()*Math.PI*2
-  });
-}
+      <div class="hero-visual glass-card">
+        <svg viewBox="0 0 520 420" role="img" aria-label="Abstract slime mold network illustration" class="hero-svg">
+          <defs>
+            <radialGradient id="blobGlow" cx="50%" cy="50%" r="60%">
+              <stop offset="0%" stop-color="rgba(202,255,117,0.95)" />
+              <stop offset="55%" stop-color="rgba(151,224,102,0.55)" />
+              <stop offset="100%" stop-color="rgba(151,224,102,0)" />
+            </radialGradient>
+            <filter id="softGlow">
+              <feGaussianBlur stdDeviation="7" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
 
-function update(){
-  ctx.fillStyle = "rgba(0,0,0,0.05)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+          <rect width="520" height="420" rx="28" fill="rgba(6, 12, 18, 0.35)"></rect>
+          <g opacity="0.15">
+            <path d="M40 80 C150 40, 220 30, 320 85 S460 170, 500 120" fill="none" stroke="#d7ffe2" stroke-width="1.2"/>
+            <path d="M40 280 C120 230, 240 220, 340 280 S450 350, 500 300" fill="none" stroke="#d7ffe2" stroke-width="1.2"/>
+            <path d="M75 345 C140 280, 185 200, 275 170 S375 120, 455 75" fill="none" stroke="#d7ffe2" stroke-width="1.2"/>
+          </g>
 
-  ctx.fillStyle = "white";
+          <g filter="url(#softGlow)">
+            <path d="M90 225 C130 120, 220 95, 290 145 C340 180, 390 170, 435 115" fill="none" stroke="#d9ff84" stroke-width="13" stroke-linecap="round" opacity="0.75"/>
+            <path d="M290 145 C300 210, 260 260, 195 295 C150 320, 115 315, 80 275" fill="none" stroke="#bbff67" stroke-width="11" stroke-linecap="round" opacity="0.7"/>
+            <path d="M290 145 C355 180, 365 255, 330 320" fill="none" stroke="#d3ff7b" stroke-width="10" stroke-linecap="round" opacity="0.62"/>
+            <path d="M195 295 C250 315, 302 310, 360 280 C410 255, 450 275, 472 330" fill="none" stroke="#c7ff72" stroke-width="10" stroke-linecap="round" opacity="0.65"/>
+          </g>
 
-  agents.forEach(a=>{
-    a.x += Math.cos(a.angle);
-    a.y += Math.sin(a.angle);
+          <g>
+            <circle cx="90" cy="225" r="18" fill="url(#blobGlow)"></circle>
+            <circle cx="290" cy="145" r="20" fill="url(#blobGlow)"></circle>
+            <circle cx="435" cy="115" r="16" fill="url(#blobGlow)"></circle>
+            <circle cx="80" cy="275" r="16" fill="url(#blobGlow)"></circle>
+            <circle cx="195" cy="295" r="17" fill="url(#blobGlow)"></circle>
+            <circle cx="330" cy="320" r="16" fill="url(#blobGlow)"></circle>
+            <circle cx="472" cy="330" r="14" fill="url(#blobGlow)"></circle>
+          </g>
 
-    if(a.x<0||a.x>canvas.width||a.y<0||a.y>canvas.height){
-      a.angle += Math.PI;
-    }
+          <g fill="#eaffc5" font-size="13" font-family="Inter, sans-serif" opacity="0.88">
+            <text x="53" y="255">food</text>
+            <text x="264" y="132">decision hub</text>
+            <text x="392" y="104">signal</text>
+            <text x="46" y="302">memory</text>
+            <text x="150" y="323">adaptation</text>
+            <text x="294" y="348">flow</text>
+            <text x="433" y="356">network</text>
+          </g>
+        </svg>
+      </div>
+    </section>
 
-    a.angle += (Math.random()-0.5)*0.2;
+    <section class="section" id="intro">
+      <div class="section-heading">
+        <p class="eyebrow">The core idea</p>
+        <h2>Why slime molds are so compelling</h2>
+      </div>
+      <div class="grid two-col">
+        <article class="glass-card feature-card">
+          <h3>The hook</h3>
+          <p>Humans spend huge amounts of effort solving efficiency problems involving movement, resources, energy, and information. Slime molds suggest some of these same problems can be solved by a brainless organism.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <h3>What they look like</h3>
+          <p>In nature, slime molds appear as yellow, web-like growths on damp leaves and dead wood, slowly moving and feeding on microorganisms living on decaying material.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <h3>Why they matter</h3>
+          <p>They do not just grow randomly. They sense conditions, shift resources internally, and reinforce useful paths while removing inefficient ones.</p>
+        </article>
+        <article class="glass-card feature-card">
+          <h3>The big question</h3>
+          <p>How can something with no brain display memory, learning, communication, and optimization? That question sits at the center of this site.</p>
+        </article>
+      </div>
+    </section>
 
-    ctx.fillRect(a.x,a.y,1,1);
-  });
+    <section class="section" id="classification">
+      <div class="section-heading">
+        <p class="eyebrow">Biological identity</p>
+        <h2>Hard to classify, easy to admire</h2>
+      </div>
+      <div class="classification-layout">
+        <div class="glass-card classification-center">
+          <span class="tiny-label">Final classification</span>
+          <h3>Protists</h3>
+          <p>Slime molds do not fit neatly into the animal, plant, or fungi kingdoms, so they are grouped among protists: eukaryotes with enclosed nuclei.</p>
+        </div>
 
-  requestAnimationFrame(update);
-}
+        <article class="glass-card orbit-card orbit-animal">
+          <h3>Animal-like</h3>
+          <ul>
+            <li>Swarm intelligence</li>
+            <li>Communication</li>
+            <li>Memory</li>
+            <li>Learning</li>
+          </ul>
+        </article>
 
-update();
-</script>
+        <article class="glass-card orbit-card orbit-plant">
+          <h3>Plant-like</h3>
+          <ul>
+            <li>Spore cell walls contain cellulose</li>
+            <li>But they do not photosynthesize</li>
+          </ul>
+        </article>
+
+        <article class="glass-card orbit-card orbit-fungi">
+          <h3>Fungi-like, but not fungi</h3>
+          <ul>
+            <li>Heterotrophs</li>
+            <li>Reproduce using spores</li>
+            <li>No chitin in cell walls</li>
+            <li>Engulf food instead of externally digesting it</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="life-cycles">
+      <div class="section-heading">
+        <p class="eyebrow">Two main forms</p>
+        <h2>Life cycles that reshape the organism</h2>
+      </div>
+      <div class="grid two-col equal-height">
+        <article class="glass-card timeline-card">
+          <h3>Cellular slime molds</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Food abundant:</strong> they live as separate single cells.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Food scarce:</strong> stressed cells release cyclic AMP, attracting neighbors.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Aggregation:</strong> many cells combine into one moving slug.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Slug stage:</strong> a 2–4 mm body of up to 100,000 cells moves toward favorable conditions.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Reproduction:</strong> some cells become stalk and die, others become spores and reproduce.</div></div>
+          </div>
+          <p class="small-note">This raises an evolutionary puzzle: why do altruistic stalk cells persist if only spore cells reproduce?</p>
+        </article>
+
+        <article class="glass-card timeline-card">
+          <h3>Plasmodial slime molds</h3>
+          <div class="timeline">
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Single giant cell:</strong> one organism can contain millions of nuclei.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Huge scale:</strong> some can spread across 30 square meters.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Exploration:</strong> tendrils extend in many directions while foraging.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Cytoplasmic streaming:</strong> flow increases toward attractants and weakens in poor conditions.</div></div>
+            <div class="timeline-item"><span class="timeline-dot"></span><div><strong>Optimization:</strong> bad branches retract while strong routes remain.</div></div>
+          </div>
+          <p class="small-note">They help decomposition by feeding mainly on bacteria growing on decaying plant matter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="intelligence">
+      <div class="section-heading">
+        <p class="eyebrow">Behavior</p>
+        <h2>Primitive intelligence, real decisions</h2>
+      </div>
+      <div class="intelligence-panel glass-card">
+        <div>
+          <h3>What slime molds can do</h3>
+          <div class="tag-row">
+            <span class="tag">Learning</span>
+            <span class="tag">Memory</span>
+            <span class="tag">Risk response</span>
+            <span class="tag">Food evaluation</span>
+            <span class="tag">Concurrent processing</span>
+            <span class="tag">Path optimization</span>
+          </div>
+          <p>
+            Their behavior depends on hunger level, food quality, and environmental risk. Instead of solving problems with a central brain,
+            they distribute sensing and decision-making through the whole body.
+          </p>
+        </div>
+        <div class="memory-box">
+          <h3>External memory</h3>
+          <p>
+            In maze experiments, slime molds leave behind a slime trail and avoid growing back into it. That means the environment itself becomes a memory system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="section-heading">
+        <p class="eyebrow">Optimization and computing</p>
+        <h2>From mazes to rail systems to computer chips</h2>
+      </div>
+      <div class="applications-grid">
+        <article class="glass-card app-card">
+          <span class="tiny-label">Experiment</span>
+          <h3>2000 maze study</h3>
+          <p>Researchers placed one specimen through a maze with food at opposite ends. After first spreading broadly, it retracted from dead ends and preserved the shortest useful path.</p>
+        </article>
+        <article class="glass-card app-card">
+          <span class="tiny-label">Infrastructure</span>
+          <h3>Tokyo rail system</h3>
+          <p>On a map of the Tokyo region with food at 36 cities, slime mold built a network strikingly similar to the real rail system, balancing cost, transport efficiency, and robustness.</p>
+        </article>
+        <article class="glass-card app-card">
+          <span class="tiny-label">Algorithms</span>
+          <h3>Traveling salesman problem</h3>
+          <p>Scientists used slime mold behavior to inspire new approaches to combinatorial optimization, including route planning problems relevant to delivery and transportation.</p>
+        </article>
+        <article class="glass-card app-card">
+          <span class="tiny-label">Computing</span>
+          <h3>Physical computing medium</h3>
+          <p>Researchers have explored both algorithms inspired by slime molds and literal slime-mold-based computing components, including conductive tubes in a 2018 computer chip study.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="interactive">
+      <div class="section-heading">
+        <p class="eyebrow">Browser-only interaction</p>
+        <h2>Interactive demonstrations</h2>
+      </div>
+
+      <div class="grid two-col equal-height">
+        <article class="glass-card interactive-card">
+          <div class="card-topline">
+            <div>
+              <h3>Maze memory demo</h3>
+              <p class="small-note">A simple browser simulation showing exploration, dead-end pruning, and reinforced routing.</p>
+            </div>
+            <button class="button button-secondary small-button" id="resetMaze">Reset</button>
+          </div>
+          <canvas id="mazeCanvas" width="540" height="360" aria-label="Maze simulation canvas"></canvas>
+        </article>
+
+        <article class="glass-card interactive-card">
+          <div class="card-topline">
+            <div>
+              <h3>Network optimization demo</h3>
+              <p class="small-note">A stylized Tokyo-inspired map where a network strengthens around the most useful links.</p>
+            </div>
+            <button class="button button-secondary small-button" id="resetNetwork">Reset</button>
+          </div>
+          <canvas id="networkCanvas" width="540" height="360" aria-label="Network optimization canvas"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="section conclusion">
+      <div class="glass-card conclusion-card">
+        <p class="eyebrow">Takeaway</p>
+        <h2>Slime molds change how we think about intelligence</h2>
+        <p>
+          They blur the boundary between biology and computation. Without a nervous system, they still sense, remember, and optimize. That makes them more than a curiosity; they are a living model for distributed intelligence.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
