@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slime moulds</title>
+    <meta
+      name="description"
+      content="A scrolling GitHub Pages website about slime moulds, built from the uploaded website structure and media plan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="progress-bar" aria-hidden="true">
+      <span class="progress-bar__fill" id="progress-fill"></span>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <a class="site-brand" href="#top">Slime moulds</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#why-it-matters">Why slime moulds matter</a>
+        <a href="#what-even-is-a-slime-mould">What even is a slime mould?</a>
+        <a href="#cellular-slime-moulds">Cellular slime moulds</a>
+        <a href="#plasmodial-slime-moulds">Plasmodial slime moulds</a>
+        <a href="#intelligence-without-a-brain">Intelligence without a brain</a>
+        <a href="#tokyo-rail-system">Tokyo rail system</a>
+        <a href="#travelling-salesman-problem">Travelling salesman problem</a>
+        <a href="#the-end">The end</a>
+        <a href="references.html">Works Cited</a>
+      </nav>
+    </header>
+
+    <aside class="dot-nav" aria-label="Section navigation">
+      <a class="dot-nav__dot" href="#why-it-matters" data-section-link="why-it-matters"><span>Why slime moulds matter</span></a>
+      <a class="dot-nav__dot" href="#what-even-is-a-slime-mould" data-section-link="what-even-is-a-slime-mould"><span>What even is a slime mould?</span></a>
+      <a class="dot-nav__dot" href="#cellular-slime-moulds" data-section-link="cellular-slime-moulds"><span>Cellular slime moulds</span></a>
+      <a class="dot-nav__dot" href="#plasmodial-slime-moulds" data-section-link="plasmodial-slime-moulds"><span>Plasmodial slime moulds</span></a>
+      <a class="dot-nav__dot" href="#intelligence-without-a-brain" data-section-link="intelligence-without-a-brain"><span>Intelligence without a brain</span></a>
+      <a class="dot-nav__dot" href="#tokyo-rail-system" data-section-link="tokyo-rail-system"><span>Tokyo rail system</span></a>
+      <a class="dot-nav__dot" href="#travelling-salesman-problem" data-section-link="travelling-salesman-problem"><span>Travelling salesman problem</span></a>
+      <a class="dot-nav__dot" href="#the-end" data-section-link="the-end"><span>The end</span></a>
+    </aside>
+
+    <main id="top">
+      <section class="hero panel observe-section" id="why-it-matters" data-section="why-it-matters">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="assets/video/timelapse-of-slime-mould.webm" type="video/webm" />
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content reveal">
+          <p class="eyebrow">01</p>
+          <h1>Why slime moulds matter</h1>
+          <div class="prose prose--hero">
+              <p>Human society is constantly trying to solve problems of how to move people, resources, energy, and information more efficiently. Scientists have realized that a single-celled, brainless slime mould may be able to solve some of those problems better than we can. That idea is fascinating not just because it is weird, but because it reflects one of environmental science’s biggest lessons: effective systems do not work in isolation. They work through relationships, feedback, and interdependence.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--split observe-section" data-section="why-it-matters-continuation">
+        <div class="container section-grid section-grid--balanced">
+          <div class="copy reveal">
+            <div class="prose">
+              <p>If you have ever walked through a forest, you may have seen yellow web-like growth spreading across dead logs or leaf litter. Moving slowly, slime moulds feed on the microorganisms living on decaying material. That makes them more than strange blobs on the forest floor. They are part of the hidden ecosystem processes that keep nutrients moving through food webs and help dead organic matter re-enter the living system.</p>
+              <p>At first glance, slime moulds seem primitive. But their behavior is another story entirely. As they move in search of food, they respond to trade-offs involving risk, hunger, food quality, moisture, and obstacles in the environment. That makes them a great example of a core ecology idea: organisms are shaped by both biotic and abiotic factors, and survival depends on responding to changing conditions within a habitat.</p>
+              <p>They have even shown learning, memory, and problem-solving behaviors that scientists compare to a primitive form of intelligence. Researchers now study slime moulds to solve real-world optimization problems like shortest paths and transport networks. In other words, this is also a story about how environmental systems can inspire human design.</p>
+            </div>
+          </div>
+          <div class="media-stack reveal">
+            <figure class="media-card media-card--portrait lift-on-hover">
+              <img
+                src="assets/images/first-slime-mold.jpg"
+                alt="Yellow slime mould growing across moss and a forest floor"
+                loading="eager"
+                data-lightbox
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt observe-section" id="what-even-is-a-slime-mould" data-section="what-even-is-a-slime-mould">
+        <div class="container section-grid section-grid--gallery">
+          <div class="copy reveal">
+            <p class="eyebrow">02</p>
+            <h2>What even is a slime mould?</h2>
+            <div class="prose">
+              <p>Slime moulds are hard to classify because they share traits with animals, plants, and fungi, yet do not fully belong to any of those groups. Like social animals, they show coordination, communication, and collective behavior. Like plants, their spores contain cellulose. Like fungi, they are heterotrophs and reproduce using spores. But they also differ from each of those groups in important ways, which is why they are placed among the protists.</p>
+              <p>Slime moulds challenge the neat categories people often expect in nature, and environmental science repeatedly asks us to think beyond simple boxes. The natural world is messier, more connected, and more surprising than our labels suggest.</p>
+            </div>
+          </div>
+          <div class="gallery-stack reveal">
+            <figure class="media-card media-card--large lift-on-hover">
+              <img
+                src="assets/images/second-slime-mould.jpg"
+                alt="Bright yellow slime mould spreading over moss"
+                loading="lazy"
+                data-lightbox
+              />
+            </figure>
+            <figure class="media-card media-card--offset media-card--small lift-on-hover">
+              <img
+                src="assets/images/second-slime-mould-closeup.jpg"
+                alt="Close view of yellow slime mould texture"
+                loading="lazy"
+                data-lightbox
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section observe-section" id="cellular-slime-moulds" data-section="cellular-slime-moulds">
+        <div class="container">
+          <div class="section-grid section-grid--balanced">
+            <div class="copy reveal">
+              <p class="eyebrow">03</p>
+              <h2>Cellular slime moulds</h2>
+              <div class="prose">
+              <p>There are more than 800 species of slime moulds, and one major type is the cellular slime mould. When food is abundant, these organisms live as separate single cells. But when food becomes scarce, they aggregate into one moving mass. That makes them a vivid example of how limiting factors shape behavior. A change in resource availability changes the entire way the organism lives.</p>
+              <p>Aggregation begins when one stressed cell releases cyclic AMP, drawing nearby cells inward until many individuals form a single slug-like body. The slug then moves toward favorable conditions such as light, heat, and humidity, searching for a place to settle and reproduce. This is a strong ecology connection because it turns abstract ideas like range of tolerance and organism–environment interaction into something visible. Slime moulds do not just live in a habitat; they constantly read it.</p>
+              <p>What makes this even stranger is that not all cells benefit equally. Some become spores and reproduce, while others become stalk cells and die. Scientists have long been fascinated by how this self-sacrificing behavior persists. This is a subtle environmental ethics moment: even a tiny, unfamiliar organism can raise big questions about cooperation, value, and what it means for life to function as part of something larger than itself.</p>
+              </div>
+            </div>
+            <div class="media-stack reveal">
+              <figure class="media-card media-card--diagram media-card--light lift-on-hover">
+                <img
+                  src="assets/images/third-slime-mold.png"
+                  alt="Diagram of the cellular slime mould life cycle"
+                  loading="lazy"
+                  data-lightbox
+                />
+              </figure>
+              <figure class="media-card media-card--support lift-on-hover">
+                <img
+                  src="assets/images/third-slime-mold-closeup.jpg"
+                  alt="Closeup of fruiting bodies of a slime mould"
+                  loading="lazy"
+                  data-lightbox
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="wide-media wide-media--video reveal">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/tpdIvlSochk?autoplay=1&mute=1&loop=1&playlist=tpdIvlSochk&playsinline=1&rel=0&modestbranding=1"
+                title="Cellular slime mould video"
+                loading="lazy"
+                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt observe-section" id="plasmodial-slime-moulds" data-section="plasmodial-slime-moulds">
+        <div class="container">
+          <div class="section-grid section-grid--balanced">
+            <div class="copy reveal">
+              <p class="eyebrow">04</p>
+              <h2>Plasmodial slime moulds</h2>
+              <div class="prose">
+              <p>The other major type is the plasmodial slime mould, sometimes called a true slime mould. Unlike the tiny cellular forms, a plasmodial slime mould can grow surprisingly large, even though it is still just one giant cell with many nuclei. As it moves over damp, decaying wood and leaves, it feeds mainly on bacteria associated with decomposition.</p>
+              <p>Slime moulds belong to the detritus side of ecosystems, where decomposition, nutrient cycling, and energy flow quietly keep the system running. They help show that ecosystem health depends not only on visible plants and animals, but also on overlooked organisms doing hidden work on the forest floor.</p>
+              <p>As plasmodial slime moulds search for food, they send tendrils outward in all directions. When they encounter an attractant, cytoplasmic streaming strengthens that route; when they encounter a repellent or poor conditions, the tendril retracts. Step by step, the organism reshapes itself into a more efficient pathway. It is almost like watching ecosystem thinking in motion: one living system responding to resources, barriers, and trade-offs across an entire landscape rather than at a single point.</p>
+              <p>This also makes slime moulds a useful reminder that biodiversity is not just about charismatic animals. Forest ecosystems depend on hidden diversity too, including organisms like slime moulds.</p>
+              </div>
+            </div>
+            <div class="media-stack reveal">
+              <figure class="media-card media-card--square media-card--video lift-on-hover">
+                <video autoplay muted loop playsinline preload="metadata">
+                  <source src="assets/video/australian-physarum-polycephalum-timelapse.webm" type="video/webm" />
+                </video>
+              </figure>
+            </div>
+          </div>
+          <div class="wide-media reveal">
+            <figure class="media-card media-card--wide lift-on-hover">
+              <img
+                src="assets/images/fourth-slime-mold.jpg"
+                alt="Branching plasmodial slime mould network across bark"
+                loading="lazy"
+                data-lightbox
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--feature observe-section" id="intelligence-without-a-brain" data-section="intelligence-without-a-brain">
+        <div class="container container--narrow reveal">
+          <p class="eyebrow">05</p>
+          <h2>Intelligence without a brain</h2>
+          <div class="prose prose--centered">
+              <p>Watching this optimization process, scientists realized slime moulds could solve surprisingly complex problems without a brain. When Physarum polycephalum was first brought into the lab, researchers mainly wanted to study movement. But that changed when Japanese scientists tested it in a maze.</p>
+              <p>They placed food at two ends of a maze. First, the slime mould spread broadly through the available space. Then it gradually withdrew from dead ends and retained the shortest working path between the food sources. That experiment matters not only because it is impressive, but because it mirrors a major course theme: simple organisms can reveal large environmental principles about adaptation, feedback, and system-wide efficiency.</p>
+              <p>Scientists later discovered that slime mould also avoids the slime trail it leaves behind, giving it a kind of externalized memory. That detail shows intelligence emerging through interaction with the environment itself. The organism is not solving the problem from above. It is learning through contact with the world around it.</p>
+          </div>
+        </div>
+        <div class="container reveal">
+          <figure class="media-card media-card--wide media-card--maze lift-on-hover">
+            <img
+              src="assets/gifs/fifth-slime-mold-maze.gif"
+              alt="Animated slime mould maze experiment"
+              loading="lazy"
+              data-lightbox
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section observe-section" id="tokyo-rail-system" data-section="tokyo-rail-system">
+        <div class="container container--narrow reveal">
+          <p class="eyebrow">06</p>
+          <h2>Tokyo rail system</h2>
+          <div class="prose prose--centered">
+              <p>One of the most famous slime mould studies asked whether it could recreate a real transport network: the Tokyo rail system. Researchers placed food at city locations around a map of the Tokyo region and allowed the slime mould to grow outward from central Tokyo. At first, it spread widely, but over time, it cut the network down to the most efficient set of transport links. The result looked strikingly similar to the real rail system.</p>
+              <p>Slime mould gives a visual model for the difference between sprawling exploration and efficient long-term design. It tests many routes at first, but it does not keep every route forever. It strengthens the useful connections and drops the wasteful ones. That makes it a powerful way to talk about transportation planning, energy use, pollution reduction, and why connected systems often work better than scattered, duplicated growth.</p>
+              <p>It also connects naturally to sustainability. Slime mould does not provide a complete moral blueprint for human society, but it does model an “adaptation under limiting conditions and efficient use of resources” principle that we care about deeply. Its behavior suggests that efficient systems can be robust without being excessive, which is exactly the kind of thinking behind sustainable infrastructure and smarter regional planning.</p>
+          </div>
+        </div>
+        <div class="container reveal">
+          <figure class="media-card media-card--wide media-card--map lift-on-hover">
+            <img
+              src="assets/images/sixth-slime-mold-tokyo-horizontal.jpg"
+              alt="Panels showing slime mould growth approximating the Tokyo rail system"
+              loading="lazy"
+              data-lightbox
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--alt observe-section" id="travelling-salesman-problem" data-section="travelling-salesman-problem">
+        <div class="container section-grid section-grid--balanced">
+          <div class="copy reveal">
+            <p class="eyebrow">07</p>
+            <h2>Travelling salesman problem</h2>
+            <div class="prose">
+              <p>Slime mould’s abilities are not limited to one maze or one rail map. Scientists have also used it to think about the travelling salesman problem, where the challenge is to find the shortest possible route that visits every city once and returns home. This is a problem that's surprisingly difficult to solve, and for every city, or every node, that gets added, it gets exponentially more complicated. When there are just four cities, there are three possible solutions. When there are eight cities, there are 2,520 possible solutions. Thus, it takes traditional computers exponentially more time to solve as they go through each solution one by one. But researchers discovered that slime mold can solve the problem in linear time, no matter how many cities get added, because it can process information concurrently. Problems like this matter in the real world for delivery routes, school buses, logistics, and infrastructure planning.</p>
+              <p>Environmental problems are rarely just biological. They involve economics, land use, technology, and human decision-making too. Slime mould becomes interesting not only because it is alive, but because studying it connects ecology to design, engineering, and the practical challenge of organizing human systems with less waste.</p>
+              <p>Because working with living slime mould directly can be slow, scientists now build algorithms inspired by its behavior.</p>
+            </div>
+          </div>
+          <div class="media-stack reveal">
+            <figure class="media-card media-card--chart media-card--light lift-on-hover">
+              <img
+                src="assets/images/seventh-slime-mold-chart.jpg"
+                alt="Chart showing route counts and solving time as number of cities increases"
+                loading="lazy"
+                data-lightbox
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--closing observe-section" id="the-end" data-section="the-end">
+        <div class="container container--narrow section--closing__inner">
+          <figure class="media-card media-card--closing reveal lift-on-hover">
+            <img
+              src="assets/gifs/eight-slime-mold.gif"
+              alt="Animated yellow slime mould growth against a dark background"
+              loading="lazy"
+              data-lightbox
+            />
+          </figure>
+          <div class="copy reveal">
+            <p class="eyebrow">08</p>
+            <h2>The end</h2>
+            <div class="prose prose--centered">
+              <p>Scientists are even exploring slime mould as a physical computing medium. In one study, researchers built a slime mould chip using a network of conductive-coated slime mould tubes that could respond to optimization tasks. What started as a forest-floor organism feeding on decay has become a source of inspiration for computing, network design, and applied mathematics.</p>
+              <p>Slime moulds matter not just because they are bizarre or clever, but because they change the way we think about intelligence, ecosystems, and value. They remind us that environmental science is not only about protecting large, obvious parts of nature. It is also about noticing the hidden organisms and relationships that keep systems functioning and, sometimes, quietly outperform our own inventions.</p>
+            </div>
+            <div class="closing-actions">
+              <a class="button" href="references.html">Works Cited</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image view">
+      <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Close image">×</button>
+      <img class="lightbox__image" id="lightbox-image" alt="" />
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
